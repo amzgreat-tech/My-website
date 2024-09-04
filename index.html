@@ -34,21 +34,61 @@
           </div>
            <div class="about-col-2">
             <h1 class="sub-title"> About My Self</h1>
-            <p> Experienced and motivated Engineer and Entrepreneur, passionate about leveraging technology and data to
+            <p class="about-text"> Experienced and motivated Engineer and Entrepreneur, passionate about leveraging technology and data to
               empower communities and businesses. Proven track record of success in co-founding and leading organizations,
               fostering innovation, and developing practical solutions to real-world challenges. Possesses strong technical skills in
               computer science and engineering, complemented by exceptional leadership, collaboration, and problem-solving
               abilities.</p>
               <div class="tab-titles">
-                <P class="tab-links"> Skills </P>
-                <P class="tab-links"> Experience </P>
-                <P class="tab-links"> Education </P>
+                <P class="tab-links active-link" onclick="opentab('skills')">  Skills </P>
+                <P class="tab-links" onclick="opentab('Experience')"> Experience </P>
+                <P class="tab-links" onclick="opentab('Education' )"> Education </P>
+              </div>
+              <div class="tab-contents active-tab" id="skills ">
+                <ul>
+                  <li><span> UI/UX</span><br> Designing Web/App Interface</li>
+                  <li><span> Web Development </span><br> Web App Development</li>
+                  <li><span> Data Science</span><br>Data Analysis</li>
+                  <li><span> Graphics Design</span><br>Corporate Branding</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="Experience">
+                <ul>
+                  <li><span> 2015-2024</span><br> Designing Web/App Interface</li>
+                  <li><span> Web Development </span><br> Web App Development</li>
+                  <li><span> Data Science</span><br>Data Analysis</li>
+                  <li><span> Graphics Design</span><br>Corporate Branding</li>
+                </ul>
+              </div> 
+              <div class="tab-contents" id="Education">
+                <ul>
+                  <li><span> Education</span><br> Designing Web/App Interface</li>
+                  <li><span> Web Development </span><br> Web App Development</li>
+                  <li><span> Data Science</span><br>Data Analysis</li>
+                  <li><span> Graphics Design</span><br>Corporate Branding</li>
+                </ul>
               </div>
            </div>
          </div>
         </div>
       </div>
-        
+        <script>
+
+          var tablinks = document.getElementsByClassName("tab-links");
+          var tabcontents = document.getElementsByClassName("tab-contents");
+          
+          function opentab(tabname){
+
+              for(tablink of tablinks) {
+                tablink.classlist.remove("active-link");
+              }
+              for(tabcontent of tabcontents) {
+                tabcontent.classlist.remove("active-tab");
+              }
+                }
+
+         
+        </script>
 
       
 </body>
